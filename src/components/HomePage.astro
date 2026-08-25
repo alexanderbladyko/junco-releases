@@ -6,6 +6,7 @@ import { useTranslations } from '../i18n/locales';
 interface Props { locale: Locale; }
 const { locale }: Props = Astro.props;
 const t = useTranslations(locale);
+
 const macLink = "https://github.com/alexanderbladyko/junco-releases/releases/download/v0.1.0/junco-darwin-arm64-0.1.0.zip";
 const windowsLink = "https://github.com/alexanderbladyko/junco-releases/releases/download/v0.1.0/junco-0.1.0.Setup.exe";
 ---
@@ -42,6 +43,14 @@ const windowsLink = "https://github.com/alexanderbladyko/junco-releases/releases
     <img class="h-[22rem] w-full rounded-3xl border border-dashed border-zinc-400 bg-zinc-200 object-cover" src="/junco-placeholder.svg" alt="Validation" />
   </section>
 
+  <section class="page-shell grid items-center gap-12 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:py-18">
+    <img class="h-[22rem] w-full rounded-3xl border border-dashed border-zinc-400 bg-zinc-200 object-cover" src="/junco-placeholder.svg" alt="Validation" />
+    <div class="max-w-xl">
+      <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-0.06em] text-zinc-800 sm:text-5xl">Different fields</h2>
+      <p class="mt-6 text-lg leading-8 text-zinc-600">Variety of fields: simple, file, image, arrays and objects</p>
+    </div>
+  </section>
+
   <section class="page-shell py-8 lg:py-12">
     <div class="rounded-3xl bg-zinc-800 py-6 text-center text-zinc-200 sm:px-12 lg:px-16 lg:py-6">
       <h2 class="mx-auto max-w-3xl text-4xl leading-tight tracking-[-0.06em] sm:text-4xl">Click to download app</h2>
@@ -49,6 +58,7 @@ const windowsLink = "https://github.com/alexanderbladyko/junco-releases/releases
         <a class="button-light border-zinc-700 bg-zinc-200" href={macLink} download>{t('macDownload')}</a>
         <a class="button-light border-zinc-700 bg-zinc-200" href={windowsLink} download>{t('windowsDownload')}</a>
       </div>
+      <p class="mt-5 text-xs uppercase tracking-widest text-zinc-500">{t('platformNote')}</p>
     </div>
   </section>
 </BaseLayout>
