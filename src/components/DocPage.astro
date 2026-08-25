@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import { docSlug, localizedPath,  type Locale } from '../i18n';
+import { useTranslations } from '../i18n/locales';
+
+interface Props {
+  locale: Locale;
+  entry: CollectionEntry<'docs'>;
+}
+
+const { locale, entry }: Props = Astro.props;
+const { Content } = await render(entry);
+
+const allEntries: CollectionEntry<'docs'>[] = await getCollection('docs');
+const entries = allEntries
+  .filter((item) => item.data.locale === locale)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const t = useTranslations(locale);
+---
+
+<BaseLayout title={entry.data.title} locale={locale} active="docs" description={entry.data.description}>
+  <div class="page-shell grid gap-12 py-12 pb-24 lg:grid-cols-[14rem_1fr] lg:gap-20 lg:py-20">
+    <aside class="self-start lg:sticky lg:top-6">
+      <div class="eyebrow mb-4">{t('sections')}</div>
+      <nav class="flex flex-wrap gap-2 lg:block" aria-label={t('docsNavLabel')}>
+        {entries.map((item) => (
+          <a class:list={{ 'block rounded-xl px-3 py-2 text-sm font-medium transition': true, 'bg-zinc-800 text-zinc-200': item.id === entry.id, 'text-zinc-500 hover:bg-zinc-300 hover:text-zinc-800': item.id !== entry.id }} href={localizedPath('/docs/' + docSlug(item.id), locale)}>
+            {item.data.title}
+          </a>
+        ))}
+      </nav>
+    </aside>
+    <article class="max-w-3xl rounded-3xl border border-zinc-300 bg-zinc-200 p-6 shadow-sm sm:p-10">
+      <Content />
+    </article>
+  </div>
+</BaseLayout>

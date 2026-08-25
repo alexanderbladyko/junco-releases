@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Junco app screenshot placeholder</title>
+  <desc id="desc">A temporary abstract placeholder for a Junco application screenshot.</desc>
+  <rect width="1200" height="800" fill="#d4d4d8"/>
+  <path d="M0 0h300L0 300zm600 0h300L600 300zm600 0v300L900 0zM0 400v300l300-300zm600 0v300l300-300zm600 0v300L900 400zM300 800h300L300 500zm600 0h300L900 500z" fill="#e4e4e7" opacity=".85"/>
+  <rect x="120" y="120" width="960" height="560" rx="28" fill="#f4f4f5" opacity=".7" stroke="#a1a1aa" stroke-width="3" stroke-dasharray="12 12"/>
+  <g fill="#71717a" font-family="monospace" text-anchor="middle">
+    <text x="600" y="380" font-size="30" letter-spacing="4">JUNCO</text>
+    <text x="600" y="430" font-size="16" letter-spacing="2">APP IMAGE GOES HERE</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+export type I18nMessages = {
+  languageName: string;
+  home: string;
+  docs: string;
+  navLabel: string;
+  docsNavLabel: string;
+  sections: string;
+  downloadLabel: string;
+  macDownload: string;
+  windowsDownload: string;
+  docsTitle: string;
+  docsCopy: string;
+  openQuickStart: string;
+  previewLabel: string;
+  homeTitle: string;
+  homeDescription: string;
+  docsDescription: string;
+  homeHeading: string;
+  homeLead: string;
+  platformNote: string;
+  imagePlaceholder: string;
+  heroImageLabel: string;
+  downloadNow: string;
+};

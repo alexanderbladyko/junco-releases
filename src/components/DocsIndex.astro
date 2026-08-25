@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { docSlug, localizedPath,  type Locale } from '../i18n';
+import { useTranslations } from '../i18n/locales';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale }: Props = Astro.props;
+
+const t = useTranslations(locale);
+
+const allEntries: CollectionEntry<'docs'>[] = await getCollection('docs');
+const entries = allEntries
+  .filter((entry) => entry.data.locale === locale)
+  .sort((a, b) => a.data.order - b.data.order);
+const firstEntry = entries[0];
+const docPath = (id: string) => localizedPath('/docs/' + docSlug(id), locale);
+---
+
+<BaseLayout title={t('docs')} locale={locale} active="docs" description={t('docsDescription')}>
+  <div class="page-shell grid gap-12 py-12 pb-24 lg:grid-cols-[14rem_1fr] lg:gap-20 lg:py-20">
+    <aside class="self-start lg:sticky lg:top-6">
+      <div class="eyebrow mb-4">{t('sections')}</div>
+      <nav class="flex flex-wrap gap-2 lg:block" aria-label={t('docsNavLabel')}>
+        {entries.map((entry) => <a class="block rounded-xl px-3 py-2 text-sm font-medium text-zinc-500 transition hover:bg-zinc-300 hover:text-zinc-800" href={docPath(entry.id)}>{entry.data.title}</a>)}
+      </nav>
+    </aside>
+    <div class="max-w-3xl">
+      <header class="mb-12">
+        <h1 class="text-5xl font-semibold leading-none tracking-[-0.07em] text-zinc-800 sm:text-7xl">{t('docsTitle')}</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-600">{t('docsCopy')}</p>
+      </header>
+      {firstEntry && <a class="button-dark" href={docPath(firstEntry.id)}>{t('openQuickStart')} <span aria-hidden="true">→</span></a>}
+    </div>
+  </div>
+</BaseLayout>
