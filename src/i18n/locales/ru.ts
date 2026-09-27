@@ -16,8 +16,7 @@ export const ru = {
   openQuickStart: "Открыть быстрый старт",
   previewLabel: "Предпросмотр приложения Junco",
   homeTitle: "Приложение",
-  homeDescription:
-    "Junco — спокойный редактор JSON и YAML с валидацией объектов.",
+  homeDescription: "Junco — редактор JSON и YAML.",
   docsDescription:
     "Документация Junco: быстрый старт и ответы на частые вопросы.",
   homeHeading: "Конфиги — ясные и под контролем.",
@@ -33,7 +32,8 @@ export const ru = {
   treeViewTitle: "Дерево",
   treeViewDescription: "Смотрите всю структуру одним взглядом.",
   fieldTypesTitle: "Разные поля",
-  fieldTypesDescription: "Работайте с простыми полями, файлами, изображениями, массивами и объектами.",
+  fieldTypesDescription:
+    "Работайте с простыми полями, файлами, изображениями, массивами и объектами.",
   fieldTypesImageLabel: "Типы полей",
   downloadCta: "Скачать приложение",
 } satisfies I18nMessages;

@@ -11,14 +11,17 @@ export const uk = {
   macDownload: "Завантажити для macOS",
   windowsDownload: "Завантажити для Windows",
   docsTitle: "Документація Junco",
-  docsCopy: "Короткі інструкції, щоб Junco швидко став частиною вашого робочого дня.",
+  docsCopy:
+    "Короткі інструкції, щоб Junco швидко став частиною вашого робочого дня.",
   openQuickStart: "Відкрити швидкий старт",
   previewLabel: "Попередній перегляд застосунку Junco",
   homeTitle: "Застосунок",
-  homeDescription: "Junco — спокійний редактор JSON і YAML із валідацією об'єктів.",
-  docsDescription: "Документація Junco: швидкий старт і відповіді на поширені запитання.",
+  homeDescription: "Junco — редактор JSON і YAML.",
+  docsDescription:
+    "Документація Junco: швидкий старт і відповіді на поширені запитання.",
   homeHeading: "Зручний редактор для ваших даних",
-  homeLead: "Junco — легкий застосунок для редагування файлів JSON і YAML із вбудованою валідацією об'єктів. Створений для геймдизайнерів, але корисний усім, хто працює з конфігураціями.",
+  homeLead:
+    "Junco — легкий застосунок для редагування файлів JSON і YAML із вбудованою валідацією об'єктів. Створений для геймдизайнерів, але корисний усім, хто працює з конфігураціями.",
   platformNote: "Доступно для macOS і Windows",
   imagePlaceholder: "Тут буде зображення застосунку",
   heroImageLabel: "Місце для знімка екрана застосунку Junco",
@@ -29,7 +32,8 @@ export const uk = {
   treeViewTitle: "Дерево",
   treeViewDescription: "Переглядайте всю структуру одним поглядом.",
   fieldTypesTitle: "Різні поля",
-  fieldTypesDescription: "Працюйте з простими полями, файлами, зображеннями, масивами та об'єктами.",
+  fieldTypesDescription:
+    "Працюйте з простими полями, файлами, зображеннями, масивами та об'єктами.",
   fieldTypesImageLabel: "Типи полів",
   downloadCta: "Завантажити застосунок",
 } satisfies I18nMessages;

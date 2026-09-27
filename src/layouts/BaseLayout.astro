@@ -17,6 +17,7 @@ const {
   locale = getLocale(Astro.url.pathname)
 }: Props = Astro.props;
 const t = useTranslations(locale)
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 
 const languageLinks = locales
   .filter((item) => item !== locale)
@@ -33,6 +34,7 @@ const languageLinks = locales
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.svg" />
     <title>Junco / {title}</title>
   </head>

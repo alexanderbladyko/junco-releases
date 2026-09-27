@@ -16,7 +16,7 @@ export const en = {
   openQuickStart: "Open quick start",
   previewLabel: "Junco app preview",
   homeTitle: "App",
-  homeDescription: "Junco is a calm app for clear, everyday work.",
+  homeDescription: "Junco is a JSON and YAML editor.",
   docsDescription:
     "Junco documentation: quick start and answers to common questions.",
   homeHeading: "Friendly editor for your data",
@@ -32,7 +32,8 @@ export const en = {
   treeViewTitle: "Tree view",
   treeViewDescription: "See the whole structure at a glance.",
   fieldTypesTitle: "Different fields",
-  fieldTypesDescription: "Work with simple fields, files, images, arrays, and objects.",
+  fieldTypesDescription:
+    "Work with simple fields, files, images, arrays, and objects.",
   fieldTypesImageLabel: "Field types",
   downloadCta: "Download the app",
 } satisfies I18nMessages;
