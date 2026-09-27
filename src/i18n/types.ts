@@ -21,4 +21,13 @@ export type I18nMessages = {
   imagePlaceholder: string;
   heroImageLabel: string;
   downloadNow: string;
+  validationTitle: string;
+  validationDescription: string;
+  validationImageLabel: string;
+  treeViewTitle: string;
+  treeViewDescription: string;
+  fieldTypesTitle: string;
+  fieldTypesDescription: string;
+  fieldTypesImageLabel: string;
+  downloadCta: string;
 };

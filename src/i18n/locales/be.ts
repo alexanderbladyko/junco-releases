@@ -27,4 +27,13 @@ export const be = {
   imagePlaceholder: "Тут будзе выява праграмы",
   heroImageLabel: "Месца для здымка экрана праграмы Junco",
   downloadNow: "Спампаваць Junco",
+  validationTitle: "Валідацыя",
+  validationDescription: "Праглядайце ўсе памылкі валідацыі падчас працы.",
+  validationImageLabel: "Панэль валідацыі",
+  treeViewTitle: "Дрэва",
+  treeViewDescription: "Праглядайце ўсю структуру адным позіркам.",
+  fieldTypesTitle: "Розныя палі",
+  fieldTypesDescription: "Працуйце з простымі палямі, файламі, выявамі, масівамі і аб'ектамі.",
+  fieldTypesImageLabel: "Тыпы палёў",
+  downloadCta: "Спампаваць праграму",
 } satisfies I18nMessages;

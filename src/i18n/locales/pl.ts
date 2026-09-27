@@ -23,4 +23,13 @@ export const pl = {
   imagePlaceholder: "Tutaj pojawi się obraz aplikacji",
   heroImageLabel: "Miejsce na zrzut ekranu aplikacji Junco",
   downloadNow: "Pobierz Junco",
+  validationTitle: "Walidacja",
+  validationDescription: "Zobacz wszystkie błędy walidacji podczas pracy.",
+  validationImageLabel: "Panel walidacji",
+  treeViewTitle: "Widok drzewa",
+  treeViewDescription: "Zobacz całą strukturę na pierwszy rzut oka.",
+  fieldTypesTitle: "Różne pola",
+  fieldTypesDescription: "Pracuj z prostymi polami, plikami, obrazami, tablicami i obiektami.",
+  fieldTypesImageLabel: "Typy pól",
+  downloadCta: "Pobierz aplikację",
 } satisfies I18nMessages;

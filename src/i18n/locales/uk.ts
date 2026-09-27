@@ -23,4 +23,13 @@ export const uk = {
   imagePlaceholder: "Тут буде зображення застосунку",
   heroImageLabel: "Місце для знімка екрана застосунку Junco",
   downloadNow: "Завантажити Junco",
+  validationTitle: "Валідація",
+  validationDescription: "Переглядайте всі помилки валідації під час роботи.",
+  validationImageLabel: "Панель валідації",
+  treeViewTitle: "Дерево",
+  treeViewDescription: "Переглядайте всю структуру одним поглядом.",
+  fieldTypesTitle: "Різні поля",
+  fieldTypesDescription: "Працюйте з простими полями, файлами, зображеннями, масивами та об'єктами.",
+  fieldTypesImageLabel: "Типи полів",
+  downloadCta: "Завантажити застосунок",
 } satisfies I18nMessages;

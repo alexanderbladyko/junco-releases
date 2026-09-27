@@ -26,4 +26,13 @@ export const en = {
   imagePlaceholder: "App image goes here",
   heroImageLabel: "Placeholder for a Junco app screenshot",
   downloadNow: "Download Junco",
+  validationTitle: "Validation",
+  validationDescription: "See all validation errors as you work.",
+  validationImageLabel: "Validation panel",
+  treeViewTitle: "Tree view",
+  treeViewDescription: "See the whole structure at a glance.",
+  fieldTypesTitle: "Different fields",
+  fieldTypesDescription: "Work with simple fields, files, images, arrays, and objects.",
+  fieldTypesImageLabel: "Field types",
+  downloadCta: "Download the app",
 } satisfies I18nMessages;

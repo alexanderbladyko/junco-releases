@@ -27,4 +27,13 @@ export const ru = {
   imagePlaceholder: "Здесь будет изображение приложения",
   heroImageLabel: "Место для скриншота приложения Junco",
   downloadNow: "Скачать Junco",
+  validationTitle: "Валидация",
+  validationDescription: "Смотрите все ошибки валидации во время работы.",
+  validationImageLabel: "Панель валидации",
+  treeViewTitle: "Дерево",
+  treeViewDescription: "Смотрите всю структуру одним взглядом.",
+  fieldTypesTitle: "Разные поля",
+  fieldTypesDescription: "Работайте с простыми полями, файлами, изображениями, массивами и объектами.",
+  fieldTypesImageLabel: "Типы полей",
+  downloadCta: "Скачать приложение",
 } satisfies I18nMessages;

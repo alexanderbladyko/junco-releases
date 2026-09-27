@@ -28,32 +28,32 @@ const windowsLink = "https://github.com/alexanderbladyko/junco-releases/releases
 
 
   <section class="page-shell grid items-center gap-12 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:py-18">
-    <img class="h-[22rem] w-full rounded-3xl border border-dashed border-zinc-400 bg-zinc-200 object-cover" src="/images/validation.png" alt="Validation" />
+    <img class="h-[22rem] w-full rounded-3xl border border-dashed border-zinc-400 bg-zinc-200 object-cover" src="/images/validation.png" alt={t('validationImageLabel')} />
     <div class="max-w-xl">
-      <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-0.06em] text-zinc-800 sm:text-5xl">Validation</h2>
-      <p class="mt-6 text-lg leading-8 text-zinc-600">See all the errors in runtime</p>
+      <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-0.06em] text-zinc-800 sm:text-5xl">{t('validationTitle')}</h2>
+      <p class="mt-6 text-lg leading-8 text-zinc-600">{t('validationDescription')}</p>
     </div>
   </section>
 
   <section class="page-shell grid items-center gap-12 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:py-18">
     <div class="max-w-xl">
-      <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-0.06em] text-zinc-800 sm:text-5xl">Tree view</h2>
-      <p class="mt-6 text-lg leading-8 text-zinc-600">See the whole structure</p>
+      <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-0.06em] text-zinc-800 sm:text-5xl">{t('treeViewTitle')}</h2>
+      <p class="mt-6 text-lg leading-8 text-zinc-600">{t('treeViewDescription')}</p>
     </div>
-    <img class="h-[22rem] w-full rounded-3xl border border-dashed border-zinc-400 bg-zinc-200 object-cover" src="/images/tree-view.png" alt="Tree view" />
+    <img class="h-[22rem] w-full rounded-3xl border border-dashed border-zinc-400 bg-zinc-200 object-cover" src="/images/tree-view.png" alt={t('treeViewTitle')} />
   </section>
 
   <section class="page-shell grid items-center gap-12 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:py-18">
-    <img class="h-[22rem] w-full rounded-3xl border border-dashed border-zinc-400 bg-zinc-200 object-cover" src="/images/field-types.png" alt="Different fields" />
+    <img class="h-[22rem] w-full rounded-3xl border border-dashed border-zinc-400 bg-zinc-200 object-cover" src="/images/field-types.png" alt={t('fieldTypesImageLabel')} />
     <div class="max-w-xl">
-      <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-0.06em] text-zinc-800 sm:text-5xl">Different fields</h2>
-      <p class="mt-6 text-lg leading-8 text-zinc-600">Variety of fields: simple, file, image, arrays and objects</p>
+      <h2 class="mt-4 text-4xl font-extrabold leading-tight tracking-[-0.06em] text-zinc-800 sm:text-5xl">{t('fieldTypesTitle')}</h2>
+      <p class="mt-6 text-lg leading-8 text-zinc-600">{t('fieldTypesDescription')}</p>
     </div>
   </section>
 
   <section class="page-shell py-8 lg:py-12">
     <div class="rounded-3xl bg-zinc-800 py-6 text-center text-zinc-200 sm:px-12 lg:px-16 lg:py-6">
-      <h2 class="mx-auto max-w-3xl text-4xl leading-tight tracking-[-0.06em] sm:text-4xl">Click to download app</h2>
+      <h2 class="mx-auto max-w-3xl text-4xl leading-tight tracking-[-0.06em] sm:text-4xl">{t('downloadCta')}</h2>
       <div class="mt-8 flex flex-wrap justify-center gap-8" aria-label={t('downloadLabel')}>
         <a class="button-light border-zinc-700 bg-zinc-200" href={macLink} download>{t('macDownload')}</a>
         <a class="button-light border-zinc-700 bg-zinc-200" href={windowsLink} download>{t('windowsDownload')}</a>

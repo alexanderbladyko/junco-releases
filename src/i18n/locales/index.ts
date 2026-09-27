@@ -5,7 +5,7 @@ import { ru } from "./ru";
 import { uk } from "./uk";
 import type { I18nMessages } from "../types";
 
-export const messages = { en, ru, be, uk, pl } as const;
+export const messages = { en, be, uk, pl, ru } as const;
 export type Locale = keyof typeof messages;
 
 export const locales = Object.keys(messages);
