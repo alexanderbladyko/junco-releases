@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { getLocale, localizedPath, locales, type Locale } from '../i18n';
+import { getLocale, localeNames, localizedPath, locales, type Locale } from '../i18n';
 import { useTranslations } from '../i18n/locales';
 
 interface Props {
@@ -22,7 +22,7 @@ const languageLinks = locales
   .filter((item) => item !== locale)
   .map((item) => ({
     locale: item,
-    label: t('languageName'),
+    label: localeNames[item as Locale],
     href: localizedPath(Astro.url.pathname, item as Locale)
   }));
 ---
@@ -45,7 +45,15 @@ const languageLinks = locales
       <nav class="flex items-center gap-3 text-xl font-medium text-zinc-500" aria-label={t('navLabel')}>
         <a class:list={{ 'rounded-lg px-3 py-2 text-zinc-800': active === 'home', 'px-3 py-2 hover:text-zinc-800': active !== 'home' }} href={localizedPath('/', locale)}>{t('home')}</a>
         <a class:list={{ 'rounded-lg px-3 py-2 text-zinc-800': active === 'docs', 'px-3 py-2 hover:text-zinc-800': active !== 'docs' }} href={localizedPath('/docs', locale)}>{t('docs')}</a>
-        {languageLinks.map((item) => <a class="rounded-lg px-3 py-2 hover:bg-zinc-300 hover:text-zinc-800" href={item.href} lang={item.locale}>{item.label}</a>)}
+        <details class="language-menu relative">
+          <summary class="flex cursor-pointer list-none items-center gap-1 rounded-lg px-3 py-2 hover:bg-zinc-300 hover:text-zinc-800">
+            {localeNames[locale]}
+            <span aria-hidden="true" class="text-sm">⌄</span>
+          </summary>
+          <div class="absolute right-0 top-full z-10 mt-2 min-w-36 rounded-xl border border-zinc-300 bg-zinc-200 p-2 text-base shadow-lg">
+            {languageLinks.map((item) => <a class="block rounded-lg px-3 py-2 hover:bg-zinc-300 hover:text-zinc-800" href={item.href} lang={item.locale}>{item.label}</a>)}
+          </div>
+        </details>
       </nav>
     </header>
     <main><slot /></main>
@@ -54,3 +62,13 @@ const languageLinks = locales
     </footer>
   </body>
 </html>
+
+<style>
+  .language-menu:not([open]) > div {
+    display: none;
+  }
+
+  .language-menu summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

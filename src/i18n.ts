@@ -1,6 +1,6 @@
-import { defaultLocale, locales, messages, type Locale } from "./i18n/locales";
+import { defaultLocale, localeNames, locales, messages, type Locale } from "./i18n/locales";
 
-export { defaultLocale, locales };
+export { defaultLocale, localeNames, locales };
 export type { Locale };
 
 export function isLocale(value: string): value is Locale {

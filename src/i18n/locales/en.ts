@@ -10,8 +10,9 @@ export const en = {
   downloadLabel: "Download Junco",
   macDownload: "Download for macOS",
   windowsDownload: "Download for Windows",
-  docsTitle: "Start with clarity.",
-  docsCopy: "Short guides to make Junco part of your working day in no time.",
+  docsTitle: "Junco documentation",
+  docsCopy:
+    "Junco is a JSON and YAML editor with built-in object validation. Made for anyone who works with configs.",
   openQuickStart: "Open quick start",
   previewLabel: "Junco app preview",
   homeTitle: "App",

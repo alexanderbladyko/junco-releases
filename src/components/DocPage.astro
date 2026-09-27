@@ -21,7 +21,7 @@ const t = useTranslations(locale);
 ---
 
 <BaseLayout title={entry.data.title} locale={locale} active="docs" description={entry.data.description}>
-  <div class="page-shell grid gap-12 py-12 pb-24 lg:grid-cols-[14rem_1fr] lg:gap-20 lg:py-20">
+  <div class="page-shell grid gap-10 py-10 pb-20 sm:py-14 lg:grid-cols-[14rem_1fr] lg:gap-20 lg:py-20 lg:pb-28">
     <aside class="self-start lg:sticky lg:top-6">
       <div class="eyebrow mb-4">{t('sections')}</div>
       <nav class="flex flex-wrap gap-2 lg:block" aria-label={t('docsNavLabel')}>
@@ -32,8 +32,118 @@ const t = useTranslations(locale);
         ))}
       </nav>
     </aside>
-    <article class="max-w-3xl rounded-3xl border border-zinc-300 bg-zinc-200 p-6 shadow-sm sm:p-10">
+    <article class="doc-content max-w-3xl rounded-3xl border border-zinc-300 bg-zinc-200 px-6 py-8 shadow-sm sm:px-10 sm:py-12 lg:px-12 lg:py-14">
       <Content />
     </article>
   </div>
 </BaseLayout>
+
+<style>
+  .doc-content :global(h1) {
+    margin: 0 0 2.5rem;
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: -0.07em;
+  }
+
+  .doc-content :global(h2) {
+    margin: 3.5rem 0 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+  }
+
+  .doc-content :global(h3) {
+    margin: 2.5rem 0 1rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .doc-content :global(p),
+  .doc-content :global(ul),
+  .doc-content :global(ol),
+  .doc-content :global(pre),
+  .doc-content :global(blockquote) {
+    margin: 0 0 1.5rem;
+  }
+
+  .doc-content :global(p),
+  .doc-content :global(li) {
+    color: #52525b;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+
+  .doc-content :global(ul),
+  .doc-content :global(ol) {
+    padding-left: 1.5rem;
+  }
+
+  .doc-content :global(table) {
+    width: 100%;
+    margin: 0 0 2rem;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  .doc-content :global(th),
+  .doc-content :global(td) {
+    padding: 0.875rem 0.75rem;
+    border-bottom: 1px solid #d4d4d8;
+    vertical-align: top;
+  }
+
+  .doc-content :global(th) {
+    color: #27272a;
+    font-weight: 700;
+  }
+
+  .doc-content :global(td) {
+    color: #52525b;
+  }
+
+  .doc-content :global(th:first-child),
+  .doc-content :global(td:first-child) {
+    padding-left: 0;
+  }
+
+  .doc-content :global(th:last-child),
+  .doc-content :global(td:last-child) {
+    padding-right: 0;
+  }
+
+  .doc-content :global(:not(pre) > code) {
+    border-radius: 0.25rem;
+    background: #e4e4e7;
+    padding: 0.125rem 0.3rem;
+    color: #27272a;
+    font-family: "DM Mono", monospace;
+    font-size: 0.875em;
+  }
+
+  .doc-content :global(li + li) {
+    margin-top: 0.5rem;
+  }
+
+  .doc-content :global(h1 + h2),
+  .doc-content :global(h1 + h3),
+  .doc-content :global(h2 + h3) {
+    margin-top: 0;
+  }
+
+  .doc-content :global(:last-child) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 640px) {
+    .doc-content :global(h2) {
+      margin-top: 4.5rem;
+      font-size: 1.75rem;
+    }
+  }
+</style>
