@@ -4,7 +4,7 @@ import { locales, type Locale } from "../i18n";
 
 export const prerender = true;
 
-const site = "https://junco.app";
+const site = "https://junco-app.com";
 
 function escapeXml(value: string) {
   return value.replace(/[<>&'\"]/g, (character) => {
@@ -41,7 +41,10 @@ export const GET: APIRoute = async () => {
 
   const urls = [...pages]
     .sort()
-    .map((path) => `  <url><loc>${escapeXml(new URL(path, site).toString())}</loc></url>`)
+    .map(
+      (path) =>
+        `  <url><loc>${escapeXml(new URL(path, site).toString())}</loc></url>`,
+    )
     .join("\n");
 
   return new Response(
