@@ -7,8 +7,8 @@ interface Props { locale: Locale; }
 const { locale }: Props = Astro.props;
 const t = useTranslations(locale);
 
-const macLink = "https://github.com/alexanderbladyko/junco-releases/releases/download/v0.1.1/junco-darwin-arm64-0.1.1.zip";
-const windowsLink = "https://github.com/alexanderbladyko/junco-releases/releases/download/v0.1.1/junco-0.1.1.Setup.exe";
+const macLink = "https://github.com/alexanderbladyko/junco-releases/releases/download/v0.1.2/junco-darwin-arm64-0.1.2.zip";
+const windowsLink = "https://github.com/alexanderbladyko/junco-releases/releases/download/v0.1.2/junco-0.1.2.Setup.exe";
 ---
 
 <BaseLayout title={t('homeTitle')} locale={locale} description={t('homeDescription')}>
